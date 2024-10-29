@@ -1,0 +1,23 @@
+@mixin closeSidebar {
+    height: 46px;
+    vertical-align: middle;
+    font-family: Arial;
+    font-size: 13.5px;
+    cursor: pointer;
+    padding: 7px 15px;
+    .fa {
+        @include cross;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &:hover {
+        .fa {opacity: 1;}
+        span:first-child {opacity: 1;}
+    }
+    span:first-child {
+        vertical-align: middle;
+        width: calc(100% - 32px);
+        display: inline-block;
+        opacity: 0.8;
+    }
+}

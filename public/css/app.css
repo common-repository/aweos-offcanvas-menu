@@ -1,0 +1,330 @@
+/* Disable default Divi menu */
+
+#mobile_menu {
+  display: none !important;
+}
+
+#offcanvas_menu_inner {
+  min-height: calc(100% - 46px);
+}
+
+#page-container {
+  width: 100%;
+}
+
+body.offcanvas-open #offcanvas_container {
+  left: 0;
+  transition: left 0.3s;
+}
+
+body.offcanvas-open #offcanvas_container + .offcanvas-menu-background {
+  left: 240px;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.3s ease 0s, width 0s ease 0s, height 0s ease 0s, left 0.3s;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+body.admin-bar #offcanvas_container {
+  top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+  body.admin-bar #offcanvas_container {
+    top: 46px;
+  }
+}
+
+body.admin-bar #offcanvas_container + .offcanvas-menu-background {
+  top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+  body.admin-bar #offcanvas_container + .offcanvas-menu-background {
+    top: 46px;
+  }
+}
+
+#offcanvas_container {
+  position: fixed;
+  width: 240px;
+  left: -240px;
+  top: 0;
+  height: 100vh;
+  display: block;
+  z-index: 200000;
+  transition: left 0.3s;
+}
+
+#offcanvas_container #offcanvas_menu_inner > li.menu-item > a {
+  font-weight: 400;
+  font-family: Arial;
+  font-size: 13.5px;
+  cursor: pointer;
+  line-height: 40px;
+  display: block;
+  padding: 0 10px 0 15px;
+}
+
+#offcanvas_container #offcanvas_menu_inner > li.menu-item.menu-item-has-children {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#offcanvas_container #offcanvas_menu_inner > li.menu-item.menu-item-has-children > a {
+  width: 100%;
+  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: background-color 0.2s;
+}
+
+#offcanvas_container #offcanvas_menu_inner > li.menu-item.menu-item-has-children > a:after {
+  content: "5";
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  font-family: ETmodules;
+  text-shadow: 0 0;
+  font-style: normal;
+  font-variant: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+  text-transform: none;
+  speak: none;
+  vertical-align: middle;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+#offcanvas_container #offcanvas_menu_inner > li.menu-item.menu-item-has-children.visible > a {
+  transition: background-color 0.2s;
+}
+
+#offcanvas_container #offcanvas_menu_inner > li.menu-item.menu-item-has-children.visible > a:after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+#offcanvas_container #offcanvas_menu_inner > li.menu-item > ul.sub-menu {
+  display: none;
+  padding-left: 0;
+  flex-basis: 100%;
+}
+
+#offcanvas_container #offcanvas_menu_inner > li.menu-item > ul.sub-menu > li > a {
+  font-weight: 400;
+  font-family: Arial;
+  font-size: 13.5px;
+  cursor: pointer;
+  line-height: 40px;
+  display: block;
+  padding: 0 10px 0 25px;
+}
+
+#offcanvas_container #offcanvas_menu_inner > li.menu-item > ul.sub-menu > li.menu-item-has-children {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#offcanvas_container #offcanvas_menu_inner > li.menu-item > ul.sub-menu > li.menu-item-has-children > a {
+  width: 100%;
+  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: background-color 0.2s;
+}
+
+#offcanvas_container #offcanvas_menu_inner > li.menu-item > ul.sub-menu > li.menu-item-has-children > a:after {
+  content: "5";
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  font-family: ETmodules;
+  text-shadow: 0 0;
+  font-style: normal;
+  font-variant: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+  text-transform: none;
+  speak: none;
+  vertical-align: middle;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+#offcanvas_container #offcanvas_menu_inner > li.menu-item > ul.sub-menu > li.menu-item-has-children.visible > a {
+  transition: background-color 0.2s;
+}
+
+#offcanvas_container #offcanvas_menu_inner > li.menu-item > ul.sub-menu > li.menu-item-has-children.visible > a:after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+#offcanvas_container #offcanvas_menu_inner > li.menu-item > ul.sub-menu > li > ul.sub-menu {
+  display: none;
+  padding-left: 0;
+  flex-basis: 100%;
+}
+
+#offcanvas_container #offcanvas_menu_inner > li.menu-item > ul.sub-menu > li > ul.sub-menu > li > a {
+  font-weight: 400;
+  font-family: Arial;
+  font-size: 13.5px;
+  cursor: pointer;
+  line-height: 40px;
+  display: block;
+  padding: 0 10px 0 35px;
+}
+
+#offcanvas_container #offcanvas_menu_inner > li.menu-item > ul.sub-menu > li > ul.sub-menu > li.menu-item-has-children {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#offcanvas_container #offcanvas_menu_inner > li.menu-item > ul.sub-menu > li > ul.sub-menu > li.menu-item-has-children > a {
+  width: 100%;
+  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: background-color 0.2s;
+}
+
+#offcanvas_container #offcanvas_menu_inner > li.menu-item > ul.sub-menu > li > ul.sub-menu > li.menu-item-has-children > a:after {
+  content: "5";
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  font-family: ETmodules;
+  text-shadow: 0 0;
+  font-style: normal;
+  font-variant: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+  text-transform: none;
+  speak: none;
+  vertical-align: middle;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+#offcanvas_container #offcanvas_menu_inner > li.menu-item > ul.sub-menu > li > ul.sub-menu > li.menu-item-has-children.visible > a {
+  transition: background-color 0.2s;
+}
+
+#offcanvas_container #offcanvas_menu_inner > li.menu-item > ul.sub-menu > li > ul.sub-menu > li.menu-item-has-children.visible > a:after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+#offcanvas_container #offcanvas_menu_inner > li.menu-item > ul.sub-menu > li > ul.sub-menu > li > ul.sub-menu {
+  display: none;
+  padding-left: 0;
+  flex-basis: 100%;
+}
+
+#offcanvas_container .ps__rail-y {
+  opacity: 1;
+  display: block !important;
+  width: 10px;
+  height: 100%;
+}
+
+#offcanvas_container .close-sidebar-inner {
+  height: 46px;
+  vertical-align: middle;
+  font-family: Arial;
+  font-size: 13.5px;
+  cursor: pointer;
+  padding: 7px 15px;
+}
+
+#offcanvas_container .close-sidebar-inner .fa {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  opacity: 0.4;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#offcanvas_container .close-sidebar-inner .fa:before,
+#offcanvas_container .close-sidebar-inner .fa:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+}
+
+#offcanvas_container .close-sidebar-inner .fa:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#offcanvas_container .close-sidebar-inner .fa:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#offcanvas_container .close-sidebar-inner:hover .fa {
+  opacity: 1;
+}
+
+#offcanvas_container .close-sidebar-inner:hover span:first-child {
+  opacity: 1;
+}
+
+#offcanvas_container .close-sidebar-inner span:first-child {
+  vertical-align: middle;
+  width: calc(100% - 32px);
+  display: inline-block;
+  opacity: 0.8;
+}
+
+#offcanvas_container + .offcanvas-menu-background {
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s, width 0s ease 0.3s, height 0s ease 0.3s, left 0.3s;
+  z-index: 100000;
+  position: fixed;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  display: block;
+}
+

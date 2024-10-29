@@ -1,0 +1,60 @@
+$itemHeight: 40px;
+
+@mixin menu-item($padding) {
+    &>a {
+        font-weight: 400;
+        font-family: Arial;
+        font-size: 13.5px;
+        cursor: pointer;
+        line-height: $itemHeight;
+        display: block;
+        padding: 0 10px 0 $padding;
+    }
+    &.menu-item-has-children {
+        display: flex;
+        flex-wrap: wrap;
+        &>a {
+            width: 100%;
+            display: block;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            transition: background-color 0.2s;
+            &:after {
+                content: "5";
+                transform: rotate(0deg);
+                transition: transform 0.2s;
+                font-family: ETmodules;
+                text-shadow: 0 0;
+                font-style: normal;
+                font-variant: normal;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                line-height: 1;
+                text-transform: none;
+                speak: none;
+                vertical-align: middle;
+                height: $itemHeight;
+                width: $itemHeight;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.3rem;
+            }
+        }
+        &.visible {
+            &>a {
+                transition: background-color 0.2s;
+                &:after {
+                    transform: rotate(90deg);
+                    transition: transform 0.2s;
+                }
+            }
+        }
+    }
+    &>ul.sub-menu {
+        display: none;
+        padding-left: 0;
+        flex-basis: 100%;
+    }
+}

@@ -1,0 +1,99 @@
+#offcanvas_container {
+    padding-right: 0px;
+}
+
+{% if displayBorder %}
+    #offcanvas_container .ps__rail-y {
+        background-color: {{borderRightColor}};
+    }
+{% endif %}
+
+#offcanvas_container .ps__thumb-y {
+    background-color: {{scrollbarThumb}};
+}
+
+#offcanvas_container {
+    background-color: {{backgroundColor}};
+}
+
+#offcanvas_menu_inner li.menu-item > a {
+    border-bottom: 1px {{borderColor}} solid;
+    color: {{fontColor}};
+}
+
+#offcanvas_container .close-sidebar-inner {
+    border-bottom: 1px {{borderColor}} solid;
+}
+
+#offcanvas_container .close-sidebar-inner span:first-child {
+    color: {{closeColor}};
+}
+
+#offcanvas_container .close-sidebar-inner .fa:before, #offcanvas_container .close-sidebar-inner .fa:after {
+    background-color: {{closeColor}};
+}
+
+#offcanvas_container .close-sidebar-inner {
+    background-color: {{closeBackground}};
+}
+
+#offcanvas_menu_inner > li.menu-item.visible > a,
+#offcanvas_menu_inner > li.menu-item.visible > ul > li.menu-item.visible > a {
+    color: {{openFont}};
+    background-color: {{openBackground}};
+}
+
+#offcanvas_container #offcanvas_menu_inner > li.menu-item > ul.sub-menu > li.menu-item-has-children > a:after,
+#offcanvas_container #offcanvas_menu_inner > li.menu-item > ul.sub-menu > li > ul.sub-menu > li.menu-item-has-children > a:after {
+    background-color: {{rightArrowBackground}};
+    color: {{rightArrowFontColor}};
+}
+
+#offcanvas_container #offcanvas_menu_inner > li.menu-item.menu-item-has-children > a:after {
+    background-color: {{rightArrowBackground}};
+    color: {{rightArrowFontColor}};
+}
+
+#offcanvas_menu_inner > li.menu-item > ul > li.menu-item > ul {
+    background-color: {{backgroundColor}};
+}
+
+#offcanvas_menu_inner > li.menu-item > ul.sub-menu,
+#offcanvas_menu_inner > li.menu-item > ul.sub-menu > li > ul.sub-menu,
+#offcanvas_menu_inner > li.menu-item > ul.sub-menu > li > ul.sub-menu > li > ul.sub-menu {
+    background-color: {{submenuBackground}};
+}
+
+@media screen and (max-width: {{maxWidth}}px) {
+    .et_header_style_left #et-top-navigation {
+        display: block;
+    }
+    #et_mobile_nav_menu {
+        display: block;
+    }
+    #top-menu {
+        display: none;
+    }
+}
+
+{% if not alwaysActive and maxWidth <= 980 %}
+@media (max-width: 980px) and (min-width: {{maxWidth + 1}}px) {
+    #top-menu {
+        display: block;
+    }
+    #et_mobile_nav_menu {
+        display: none;
+    }
+}
+{% endif %}
+
+{% if alwaysActive %}
+    @media (min-width: 980px) {
+    #top-menu {
+        display: none;
+    }
+    #et_mobile_nav_menu {
+        display: block;
+    }
+}
+{% endif %}
